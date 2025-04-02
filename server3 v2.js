@@ -36,6 +36,10 @@ app.use((req, res, next) => {
     next();
 });
 
+app.get('/', (req,res)=>{
+    res.send('This is Toruk Server , working fine')
+})
+
 // Define Mongoose models
 const Admin = mongoose.model('Admin', new mongoose.Schema({
     email: String,
